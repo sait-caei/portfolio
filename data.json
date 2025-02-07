@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Equipment Identification for Endotracheal Intubation",
+        "description": "This is a project made for HPS at SAIT as a part of their Teaching Innovators Program",
+        "link": "endotracheal-intubation-equipment-identification"
+    },
+    {
+        "name": "3D Naming of Facing Chunk Machine",
+        "description": "This is a project made for the MACH course to name the parts of a facing chunk machine",
+        "link": "mach354-facing-chunk-machine-naming"
+    }
+]
