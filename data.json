@@ -8,5 +8,10 @@
         "name": "3D Naming of Facing Chunk Machine",
         "description": "This is a project made for the MACH course to name the parts of a facing chunk machine",
         "link": "mach354-facing-chunk-machine-naming"
+    },
+    {
+        "name": "CAEI Treasure Hunt",
+        "description": "A simple exploration game to showcase what we do at CAEI (2024)",
+        "link": "caei-treasure-hint"
     }
 ]

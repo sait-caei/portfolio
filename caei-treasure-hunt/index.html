@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>CAEI Treasure Hunt</title>
+	<style>
+		html,
+		body {
+			background: #fff;
+			width: 100%;
+			height: 100%;
+			overflow: visible;
+			padding: 0;
+			margin: 0;
+		}
+
+		div#gameContainer {
+			background: transparent !important;
+			position: absolute;
+		}
+
+		div#gameContainer canvas {
+			position: absolute;
+		}
+
+		div#gameContainer canvas[data-pixel-art="true"] {
+			position: absolute;
+			image-rendering: optimizeSpeed;
+			image-rendering: -webkit-crisp-edges;
+			image-rendering: -moz-crisp-edges;
+			image-rendering: -o-crisp-edges;
+			image-rendering: crisp-edges;
+			image-rendering: -webkit-optimize-contrast;
+			image-rendering: optimize-contrast;
+			image-rendering: pixelated;
+			-ms-interpolation-mode: nearest-neighbor;
+		}
+
+		#custom-logo, #custom-loader {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+			#custom-logo {
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+
+			width: 150px;
+			height: auto;
+		}
+
+			#custom-loader {
+			margin-top: 155px;
+			width: 80%;
+			height: 30px;
+			background: lightgray;
+			border-radius:5px;
+			box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.145);
+			}
+
+			#custom-loader .fill {
+			width: 0%;
+			height: 100%;
+			border-radius:5px;
+			background: linear-gradient(6deg, rgba(43,98,154,1) 0%, rgba(0,212,255,1) 100%);
+			}
+
+			#custom-loader .label {
+			position: relative;
+			font-size: 20px;
+			text-align: center;
+			top: 10px;
+			font-family: Lato, sans-serif, calibri;
+			}
+
+			#custom-loader .info {
+			position: relative;
+			font-size: 15px;
+			text-align: center;
+			top: 30px;
+			font-family: Lato, sans-serif, calibri;
+			}
+	</style>
+</head>
+
+<body>
+	<div id="gameContainer">
+		<canvas id="unity-canvas" data-pixel-art="false"></canvas>
+		<div id="unity-custom-loading-screen">
+			<img src="./logo.png" id="custom-logo">
+			<div id="custom-loader">
+			  <div class="fill"></div>
+			  <div class="label"></div>
+			  <div class="info">Copyright (c) 2024. Southern Alberta Institute of Technology</div>
+			</div>
+		  </div>
+		<script src="Build/Build.loader.js"></script>
+		<script>
+			var canvas = document.querySelector("#unity-canvas");
+			var loadingScreen = document.querySelector("#unity-custom-loading-screen");
+			var customLoadingBar = document.querySelector("#custom-loader");
+			var config = {
+				dataUrl: "Build/Build.data",
+				frameworkUrl: "Build/Build.framework.js",
+				codeUrl: "Build/Build.wasm",
+				streamingAssetsUrl: "StreamingAssets",
+				companyName: "CAEI",
+				productName: "CAEI Treasure Hunt",
+				productVersion: "0.1.0",
+			};
+			var scaleToFit;
+			try {
+				scaleToFit = !!JSON.parse("false");
+			} catch (e) {
+				scaleToFit = true;
+			}
+			function progressHandler(progress) {
+
+				const fill = customLoadingBar.getElementsByClassName("fill")[0];
+				const fillText = customLoadingBar.getElementsByClassName("label")[0];
+
+				fill.animate(
+					[
+					{ width: (progress * 100) + "%" }
+					],
+					{
+					duration: 300,
+					fill: "forwards"
+					}
+				);
+
+				fillText.textContent = "Loading: " + (progress * 100).toFixed() + "%";
+			}
+
+
+			function onResize() {
+				var container = canvas.parentElement;
+				var w;
+				var h;
+
+				if (scaleToFit) {
+					w = window.innerWidth;
+					h = window.innerHeight;
+
+					var r = 1080 / 1920;
+
+					if (w * r > window.innerHeight) {
+						w = Math.min(w, Math.ceil(h / r));
+					}
+					h = Math.floor(w * r);
+				} else {
+					w = window.innerWidth;
+					h = window.innerHeight;
+				}
+
+				container.style.width = canvas.style.width = w + "px";
+				container.style.height = canvas.style.height = h + "px";
+				container.style.top = Math.floor((window.innerHeight - h) / 2) + "px";
+				container.style.left = Math.floor((window.innerWidth - w) / 2) + "px";
+			}
+
+			loadingScreen.style.display = "block";
+
+			createUnityInstance(canvas, config, progressHandler).then(function (instance) {
+				canvas = instance.Module.canvas;
+				loadingScreen.style.display = "none";
+				onResize();
+			});
+			window.addEventListener('resize', onResize);
+			onResize();
+
+			if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+				// Mobile device style: fill the whole browser client area with the game canvas:
+				const meta = document.createElement('meta');
+				meta.name = 'viewport';
+				meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+				document.getElementsByTagName('head')[0].appendChild(meta);
+			}
+		</script>
+	</div>
+</body>
+
+</html>
