@@ -13,5 +13,10 @@
         "name": "CAEI Treasure Hunt",
         "description": "A simple exploration game to showcase what we do at CAEI (2024)",
         "link": "caei-treasure-hunt"
+    },
+    {
+        "name": "Equipment Placement for Endotracheal Intubation",
+        "description": "This is a project made for HPS at SAIT as a part of their Teaching Innovators Program",
+        "link": "endotracheal-intubation-equipment-placement"
     }
 ]
