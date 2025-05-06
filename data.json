@@ -18,5 +18,35 @@
         "name": "Equipment Placement for Endotracheal Intubation",
         "description": "This is a project made for HPS at SAIT as a part of their Teaching Innovators Program",
         "link": "endotracheal-intubation-equipment-placement"
+    },
+    {
+        "name": "Event Planning Activity",
+        "description": "The purpose of this activity is to help you learn about the multitude of options you need to consider when planning events of different types and sizes.",
+        "link": "event-planning"
+    },
+    {
+        "name": "Hardware Simulation Assignment",
+        "description": "In this activity, you’ll practice the skills you’ll use when you rebuild a computer.",
+        "link": "hardware-simulation-assignment-scenario"
+    },
+    {
+        "name": "Vision Care Lensometer Simulation",
+        "description": "The purpose of this activity is to prepare you for using lensometers in the clinical lab.",
+        "link": "lensometer-simulation"
+    },
+    {
+        "name": "Patient Journey",
+        "description": "Simulation of a patient journey through the healthcare system",
+        "link": "patient-journey"
+    },
+    {
+        "name": "River Community Map",
+        "description": "Interactive activity to observer the community of Riverbend",
+        "link": "river_community_map"
+    },
+    {
+        "name": "Vision Care Slit Lamp Simulation",
+        "description": "Interactive activity to prepare you for using slit lamps in the clinical lab.",
+        "link": "vision-care-slit-lamp-simulation"
     }
 ]

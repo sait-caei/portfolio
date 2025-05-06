@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="D2L_10309" xmlns:d2l_2p0="http://desire2learn.com/xsd/d2lcp_v2p0" xmlns:scorm_1p2="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2">
+    <organizations default="d2l_orgs">
+        <organization identifier="d2l_org">
+            <item identifier="1717" identifierref="RES_CONTENT_1717" d2l_2p0:id="1" d2l_2p0:resource_code="SAIT-5625650" description="" completion_type="0">
+                <metadata>
+                    <lom xmlns:prefix0="http://purl.org/dc/elements/1.1/" xmlns:prefix1="http://learn.sait.ca/metadata/terms/" xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1">
+                        <general>
+                            <prefix1:Subject>
+                                <source>
+                                    <langstring xml:lang="en-CA" />
+                                </source>
+                                <value>
+                                    <langstring xml:lang="en-CA">Unspecified</langstring>
+                                </value>
+                            </prefix1:Subject>
+                            <title>
+                                <langstring xml:lang="en-CA">Event Planning Activity</langstring>
+                            </title>
+                            <prefix1:School_Department>
+                                <source>
+                                    <langstring xml:lang="en-CA" />
+                                </source>
+                                <value>
+                                    <langstring xml:lang="en-CA">Hospitality & Tourism</langstring>
+                                </value>
+                            </prefix1:School_Department>
+                            <language>en</language>
+                            <description>
+                                <langstring xml:lang="en-CA">An interactive activity that allows the user to plan the furniture, equipment, food and beverages that they will need for events of different types (meetings, social events, and tradeshows) and sizes (0-500+ guests).</langstring>
+                            </description>
+                            <keyword>
+                                <langstring xml:lang="en-CA">"Event Planning Activity", ht, hospitality, hospitality and tourism, EVNT 250, "Event Project Management", events, planning, meetings, weddings, "social events", food, beverages</langstring>
+                            </keyword>
+                        </general>
+                        <rights>
+                            <prefix1:Creator_Publisher>Krista Iverson</prefix1:Creator_Publisher>
+                            <prefix1:Creation_Year>2021</prefix1:Creation_Year>
+                            <prefix1:Resource_Type>
+                                <source>
+                                    <langstring xml:lang="en-CA" />
+                                </source>
+                                <value>
+                                    <langstring xml:lang="en-CA">Activity</langstring>
+                                </value>
+                            </prefix1:Resource_Type>
+                            <copyrightandotherrestrictions>
+                                <source>
+                                    <langstring xml:lang="en-CA">LOMv1.0</langstring>
+                                </source>
+                                <value>
+                                    <langstring xml:lang="en-CA">yes</langstring>
+                                </value>
+                            </copyrightandotherrestrictions>
+                            <description>
+                                <langstring xml:lang="en-CA">http://creativecommons.org/licenses//3.0//</langstring>
+                            </description>
+                        </rights>
+                    </lom>
+                </metadata>
+                <title>Event Planning Activity</title>
+                <scorm_1p2:maxtimeallowed />
+                <scorm_1p2:timelimitaction />
+                <scorm_1p2:datafromlms />
+                <scorm_1p2:masteryscore />
+            </item>
+        </organization>
+    </organizations>
+    <resources>
+        <resource identifier="RES_CONTENT_1717" title="" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="" href="index.html" scorm_1p2:scormtype="sco" />
+    </resources>
+</manifest>

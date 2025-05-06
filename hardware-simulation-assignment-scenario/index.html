@@ -1,0 +1,119 @@
+﻿<html>
+	<head>
+		<title>Hardware Simulation</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/main.css">	
+	</head>
+	<body onload="main.connectToLMS();" onunload="main.disconnectFromLMS();" onbeforeunload="main.disconnectFromLMS();">
+		<div id="content">
+			<div id="activity">
+				<div id="leftPanel">		
+					<h3>Build Assembly</h3>
+					<div id="buildAssemblyInfo">
+						<button id="btnBuildScenario" type="button">Build Scenario</button>		
+						<p id="stepNum"></p>
+						<button id="btnInstructions" type="button">Instructions</button>
+					</div>
+					<div id="buildAssembly" class="box">
+						<div class="container"><div id="canvas" class="canvas"><canvas id="canvasBackground" width="622px" height="465px"></canvas></div></div>
+						<div class="container"><div class="canvas"><canvas id="canvasDropTargets" width="622px" height="465px"></canvas></div></div>
+						<div class="container"><div class="canvas"><canvas id="canvasWireTargets" width="622px" height="465px"></canvas></div></div>
+						<div class="container"><div class="canvas"><canvas id="canvasWires" width="622px" height="465px"></canvas></div></div>
+						<div class="container"><div class="canvas"><canvas id="canvasMagnification" width="622px" height="465px"></canvas></div></div>
+						<div class="container"><div class="canvas"><canvas id="canvasForeground" width="622px" height="465px"></canvas></div></div>
+					</div>
+					<div id="componentList" class="box">
+						<h4>Component List</h4>
+						<div class="column">
+							<div class="buildComponent"> 
+								<div id="connCase" class="buildComponentConnections"></div>
+								<p><strong>Case:</strong><span id="itemCase"></span></p>
+							</div>
+							<div class="buildComponent connectable doubleline">
+								<div id="connMotherboard" class="buildComponentConnections"></div>
+								<p><strong>Motherboard:</strong> <span id="itemMotherboard"></span></p>
+							</div>
+							<div class="buildComponent connectable doubleline">
+								<div id="connPowerSupply" class="buildComponentConnections"></div>
+								<p><strong>Power Supply:</strong> <span id="itemPowerSupply"></span></p>
+							</div>
+							<div class="buildComponent connectable doubleline">
+								<div id="connChassisFan" class="buildComponentConnections"></div>
+								<p><strong>Chassis Fan:</strong> <span id="itemChassisFan"></span></p>
+							</div>
+						</div>
+						<div class="column">
+							<div class="buildComponent connectable">
+								<div id="connCPU" class="buildComponentConnections"></div>
+								<p><strong>CPU + Fan:</strong> <span id="itemCPU"></span></p>
+							</div>
+							<div class="buildComponent">
+								<div id="connRAM" class="buildComponentConnections"></div>
+								<p><strong>RAM:</strong> <span id="itemRAM"></span></p>
+							</div>
+							<div class="buildComponent">
+								<div id="connGPU" class="buildComponentConnections"></div>
+								<p><strong>GPU:</strong> <span id="itemGPU"></span></p>
+							</div>
+							<div class="buildComponent">
+								<div id="connCards" class="buildComponentConnections"></div>
+								<p><strong>Expansion Cards:</strong> <span id="itemCards"></span></p>
+							</div>
+							<div class="buildComponent connectable">
+								<div id="connDrives" class="buildComponentConnections"></div>
+								<p><strong>Hard Drives:</strong> <span id="itemDrives"></span></p>
+							</div>
+						</div>
+						<div class="column last">
+							<div class="buildComponent">
+								<p><strong>Power Supply Connectors:</strong> <span id="itemPSC"></span></p>
+							</div>
+							<div class="buildComponent">
+								<p><strong>Front Panel Connectors:</strong> <span id="itemFPC"></span></p>
+							</div>
+							<div class="buildComponent">
+								<p><strong>Other Connectors:</strong> <span id="itemOC"></span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="rightPanel" class="right half">	
+					<h3>Component Shelf</h3>	
+					<div id="componentShelf" class="box">
+						<div id="componentsShelfSidebar" class="box"></div>
+						<div id="componentsShelfDisplay" class="box">					
+							<div id="details" class="box">
+								<p id="detailsInstructions"></p>
+								<div id="interactableComponent">
+									<img id="detailsImage" draggable="false" src="" />
+									<img id="detailsImageDrag" draggable="false" src="" />
+								</div>
+								<h4 id="detailsName">Component Name</h4>
+								<div id="detailsDesc"></div>
+							</div>
+						</div>
+					</div>	
+					<button id="btnSubmit" type="button">Submit</button>	
+					<button id="btnReset" type="button">Reset</button>			
+				</div>
+			</div>
+		</div>
+
+		<script src="js/diagram/target.js"></script>
+		<script src="js/diagram/dropTarget.js"></script>
+		<script src="js/diagram/wiringTarget.js"></script>
+		<script src="js/diagram/wiringConnection.js"></script>
+		<script src="js/diagram/infoDialog.js"></script>
+		<script src="js/scenarios/scenario.js"></script>
+		<script src="js/scenarios/scenarioOlderComputer.js"></script>
+		<script src="js/scenarios/scenarioThinClient.js"></script>
+		<script src="js/scenarios/scenarioThickClient.js"></script>
+		<script src="js/scenarios/scenarioCADCAM.js"></script>
+		<script src="js/panels/buildDiagram.js"></script>
+		<script src="js/panels/componentList.js"></script>
+		<script src="js/panels/componentShelf.js"></script>
+		<script src="js/utils/canvasManager.js"></script>
+		<script src="js/components.js"></script>
+		<script src="js/main.js"></script>
+    </body>
+</html>

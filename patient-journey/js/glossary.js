@@ -1,0 +1,57 @@
+class Glossary 
+{
+	constructor() 
+	{
+		this.terms = [
+			["Advanced Care Paramedic", "ACP", "ACPs provide advanced medical care in emergency situations. ACPs are often part of \nambulance services and emergency medical response teams. ACPs conduct patient assessments and assist with diagnosing and \nproviding immediate medical interventions to patients in critical or life-threatening conditions. They also work collaboratively with \nother health-care professionals in pre-hospital settings where the patient needs immediate care. "],
+			["Dental Assistant", "DA", "DAs work closely with dentists and dental hygienists to support and assist with clinical and \nadministrative tasks. These tasks include providing direct patient care and assisting the dentist with procedures, preparing specific \ndental equipment, and ensuring patient comfort. Dental assistants work under the supervision of dentists, following their instructions \nwhile adhering to dental practice regulations and ethical guidelines."],
+			["Diagnostic Medical Sonographer", "DMS", "A DMS uses ultrasound technology to produce images of internal body structures for \ndiagnostic purposes. They work in various health-care settings including hospitals, clinics, imaging centres and physicians' offices. "],
+			["Health Information Management", "HIM", "HIM professionals focus on the management and use of patient health information, \nmedical records and health-care data. This includes ensuring the accuracy, accessibility, confidentiality and integrity of health \ninformation in various health-care settings. This role requires a strong understanding of health-care operations, technology, legal and \nregulatory frameworks, and data management principles. This contributes to the effective and efficient use of health information to \nsupport patient care, decision-making, research, and healthcare management."],
+			["Medical Device Reprocessing Technician", "MDRT", "MDRTs are responsible for cleaning, sterilizing and maintaining \nmedical instruments and equipment used in health-care facilities. This helps ensure patient safety by preventing the spread of \ninfections. This role requires close attention to detail, adherence to health and safety protocols and in-depth knowledge of infection \ncontrol principles. "],		
+			["Medical Doctor", "MD", "See Physician."],
+			["Medical Laboratory Assistant", "MLA", "MLAs perform laboratory tasks to support the diagnosis, treatment and prevention of \ndiseases. They support laboratory operations and facilitate accurate diagnostic testing."],
+			["Medical Laboratory Technologist", "MLT", "See Registered Medical Laboratory Technologist."],		
+			["Medical Office Assistant", "MOA", "MOAs are administrative professionals who support the efficient operation of a medical office, \nclinic or health-care facility. This includes performing a variety of administrative, clerical and customer service duties to support the \nhealth-care team and ensure efficient patient care. "],
+			["Medical Radiologic Technologist", "MRT", "MRTs use various medical imaging technologies to perform diagnostic imaging \nprocedures that aid in the diagnosis and treatment of patients. This includes interpreting and reporting diagnostic imaging results in \nhospitals, clinics and imaging centres. "],
+			["Nuclear Medicine Technologist", "NMT", "NMTs use radioactive substances, known as radiopharmaceuticals, to perform diagnostic \nand therapeutic procedures in nuclear medicine. They work in hospitals, medical imaging centres and nuclear medicine departments, \nusing specialized imaging techniques to diagnose and treat a variety of medical conditions. "],
+			["Occupational Therapist", "OT", "OTs help individuals of all ages improve their ability to participate in meaningful occupations and \nperform daily activities that are essential for physical and mental well-being, independence and quality of life. This includes \ndeveloping programs that help individuals maintain, restore or increase their ability to care for themselves. OTs work in hospitals, \nrehabilitation centres, schools, clinics, home care, and community-based programs. "],
+			["Ophthalmic Assistant", "", "Ophthalmic assistants work closely with ophthalmologists to provide eye care services to patients. They \nassist with eye examinations, perform diagnostic tests and support patient care in ophthalmology clinics and eye care centres. They \nplay a major role in optimizing the operation of ophthalmology clinics."],
+			["Optician", "", "Opticians specialize in fitting, fabricating and dispensing of eyeglasses and contact lenses. Opticians work closely with \noptometrists and ophthalmologists to help patients achieve clear and comfortable vision through the proper selection and fitting of \neyeglasses and contact lenses. "],
+			["Optometric Assistant", "", "Optometric assistants support optometrists in providing eye care services including eye care procedures, \nequipment operation and general patient care. Optometric assistants work in optometry clinics, eye care centres and private \npractices."],
+			["Pharmacist", "", "Pharmacists are licensed professionals who ensure safe and effective use of medications. This involves reviewing \nphysicians’ prescriptions, dispensing and labelling medications, instructing patients on proper medication use, ensuring correct \ndosages, keeping records of patient history, strictly following legal rules and regulations around drug use, and collaborating with other \nhealthcare professionals. Pharmacists work in community pharmacies, hospitals, clinics, research institutions and pharmaceutical \ncompanies."],
+			["Pharmacy Assistant", "PA", "PAs assists pharmacists in the management and dispensing of medications, and help ensure efficient \ndaily operation of the pharmacy. This includes maintaining medication inventories, making sure prescription records are accurate and \nup-to-date, and taking on administrative duties such as managing bill insurance, answering phones and emails, and entering client \ninformation into a database. PAs also work in hospitals and other health-care settings."],
+			["Physician", "", "Also called Medical Doctor (MD). Physicians are involved in all aspects of patient care. They diagnose and treat patients, \nconduct physical examinations, order diagnostic tests, prescribe medications and perform a wide variety of medical procedures. They \nalso provide guidance and advice to patients to help prevent illness and injury. Physicians work in hospitals, clinics, private practices \nand research institutions."],
+			["Physiotherapist", "PT", "A physiotherapist, also known as a physical therapist, specializes in assessing, diagnosing and treating \nphysical conditions and movement dysfunctions. Physiotherapists use their knowledge of anatomy, physiology and exercise therapy \nto help patients of all ages recover from injuries, manage chronic conditions and improve their overall physical well-being. PTs often \nfocus on helping clients improve and maintain functional independence while promoting the best physical performance. \nPhysiotherapists work in hospitals, private clinics, sports facilities and rehabilitation centres."],
+			["Primary Care Paramedic", "PCP", "PCPs provide emergency medical care and transportation to patients in pre-hospital settings. \nPCPs assess and manage a wide range of medical emergencies and traumatic injuries. They typically work as part of an ambulance \ncrew, responding to emergency calls and providing critical care until patients can be transferred to a hospital for further treatment."],
+			["Registered Dietician", "RD", "A registered dietician is qualified healthcare professional specializing in nutrition. RD. They are skilled in \nassessing an individual’s dietary needs, creating personalized nutrition plans, and providing guidance for various health conditions \nsuch as diabetes, heart disease, and more. RDs collaborate with other healthcare professionals in interprofessional teams including \nphysicians, nurses, and other healthcare professions."],
+			["Registered Medical Laboratory Technologist", "MLT", "A registered MLT performs complex laboratory tests and analyses to help in \nthe diagnosis, treatment and prevention of diseases. MLTs work in medical laboratories, hospitals, research facilities and other \nhealth-care settings. Registered MLTs also providing essential laboratory information for monitoring patients. "],
+			["Registered Nurse", "RN", "RNs provide direct patient care, coordinate care activities, and promote and maintain the health and \nwell-being of individuals, families and communities. RNs also help restore health and minimize suffering while assessing, planning, \nproviding and evaluating treatment, as well as counselling and educating patients. Registered nurses work in various health-care \nsettings including hospitals, clinics, nursing homes, community health centres, schools and home care. "],
+			["Registered Respiratory Therapist", "RRT", "RRTs assess, treat and manage patients with respiratory conditions. This includes \nevaluating, diagnosing and treating individuals with breathing disorders such as asthma, chronic obstructive pulmonary disease \n(COPD), and respiratory distress. RRTs work in hospitals, clinics, pulmonary rehabilitation centres, sleep disorder clinics and home \nhealth-care agencies. "],
+			["Registered Social Worker","RSW", "RSWs provide social and emotional support to patients and their families. This includes \naddressing the psychosocial aspects of illness and helping patients navigate the health-care system. RSWs also provide counselling, \ntherapy, guidance with navigating systems, resources and information, as well as essential support to patients and families during \nchallenging times."],
+			["Rehab Assistant", "", "See Rehabilitation Therapy Assistant."],
+			["Rehabilitation Therapy Assistant", "RTA", "Also called Rehab Assistant. RTAs work under the supervision of rehabilitation therapists \nsuch as occupational therapists, physical therapists or speech-language pathologists. They assist in providing therapy and support \nservices to individuals recovering from injuries, surgeries or medical conditions. They also help deliver therapy services that focus on \npatient recovery including regaining or improving functional abilities. RTAs work in hospitals, rehabilitation centres, outpatient clinics \nand long-term care facilities. "],
+			["Speech and Language Pathologist", "SLP", "SLPs assess, diagnose and treat individuals with communication and swallowing \ndisorders. SLPs work with people of all ages, from infants to the elderly, who experience difficulties with communication and speech \nproduction. Their primary goal is to help individuals improve their communication skills and enhance their quality of life."]
+		];
+	}
+		
+	/* ------------------------------------------------------------ */
+	/* ----- General ---------------------------------------------- */
+	
+	getTermData(term)
+	{
+		let termData = [];
+		for (let i = 0; i < this.terms.length; i++)
+		{
+			if (term == this.terms[i][0])
+			{
+				termData = this.terms[i];
+			}
+		}
+		return termData;
+	}
+	
+	getAllTermData()
+	{
+		return this.terms;
+	}
+}

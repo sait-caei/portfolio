@@ -1,0 +1,73 @@
+body
+{
+	font-family: PT San, Arial, Helvetica, sans-serif;
+}
+
+#impExpDiv
+{
+	background-color:#333333;
+	box-sizing: border-box;
+	width:960px;
+	padding:1em;
+	margin-top:0.25em;
+	float:left;
+}
+
+h3 
+{
+	color:#ff8e66;
+	font-size:16px;
+	
+	margin:0;
+}
+
+p 
+{ 
+	color:#fff;
+	font-size:14px;
+} 
+
+#impExpTextDiv
+{
+	width:45em;
+}
+
+textarea
+{
+	margin-bottom:0.5em;
+	height:6em;
+	width:100%;
+	box-sizing: border-box;
+}
+
+button
+{
+	background-color: #4d4d4d;
+	color:#47dd7d;
+	border:2pt solid #191919;
+	border-radius: 0.5em;
+	width:9em;
+	padding:0.35em;
+	cursor: pointer;
+} 
+
+button:hover
+{
+	background-color: #333333;
+	color:#ff8e66;
+}
+
+#btnClear 
+{ 
+	float:right; 
+	margin-right:0;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

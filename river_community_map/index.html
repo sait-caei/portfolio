@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>River Community Map</title>
+    <script src="Build/UnityLoader.js"></script>
+	<script src="js/main.js"></script>	
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
+    <div id="unityContainer" style="width: 960px; height: 600px; margin: auto"></div>
+	<div id ="impExpDiv" class="unselectable">
+		<h3>Importing and Exporting Map Layouts</h3>
+		<p>Paste your import code in the text box below and tap the import button to load a saved map. Tap the export and copy button to export the code for the current map. It will automatically be copied to your system's clipboard. After it has been copied you can paste it into a text document or e-mail to save it and/or send it your instructor.</p>
+		<div id="impExpTextDiv">
+			<textarea id="impExpTextarea" name="impExpTextarea" rows="4" cols="100"></textarea>
+			<div id="buttonsDiv">
+				<button onClick='importCode()'>Import</button>
+				<button id="btnExport" onClick='exportCode()'>Export & Copy</button>
+				<button id="btnClear" onClick='clearCode()'>Clear</button>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

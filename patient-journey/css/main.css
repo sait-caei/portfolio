@@ -1,0 +1,167 @@
+
+/* ------------------------------------------------------------ */
+/* ------ General Set-up -------------------------------------- */
+
+* { 
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-family: "Arial", sans-serif; 
+	font-size: 15px;
+	padding:0;
+	margin:0;
+}
+
+h2 { font-size:17px; }
+h3 { font-size:17px; }
+h4 { font-size:15px; }
+p { padding: 0.5em 0; }
+
+button 
+{ 	
+	background-color:#f0f0f0;
+	border:2pt solid #2e3336; /*Same colour as background so that disabled buttons don't shift when a border is added */
+	border-radius: 6px;
+	cursor:pointer;
+	padding:0.3em 0.5em; 
+}
+button:hover
+{ 
+	background-color:#c4c4c4;
+    background-image: linear-gradient(180deg, #f0f0f0 50%, #bdbdbd 80%);
+}
+button:active { transform: translateY(1px); }
+button:disabled, button:disabled:hover, button:disabled:active
+{
+	background-color:#3d3d3d;
+	background-image:none;
+	border:2pt solid #3d3d3d;
+	color:#777c82;
+	cursor:default;
+	transform: translateY(0px);
+}
+
+
+#activity
+{
+	/*overflow:auto;*/
+	position:relative;
+	margin:0 auto;
+}
+
+
+/* ------------------------------------------------------------ */
+/* ------ Content --------------------------------------------- */
+
+#activity-content 
+{ 
+	/*background-color:#f2f2f2;*/
+	width:1002px;
+	margin: 0 auto;
+}
+
+#canvasGroup 
+{
+	clear:both;
+	margin: 0 auto;
+    overflow: hidden;
+    zoom: 1; 
+}
+
+.canvasContainer 
+{
+    float: left;
+    margin-left: -100%;
+    position: relative;
+	left: 100%;
+    width: 100%;
+}
+
+
+/* ------------------------------------------------------------ */
+/* ----- Dialogs ---------------------------------------------- */
+
+#dialog
+{ 
+	background-color:#ffffff;
+	border:8pt solid #ccc;
+	outline:2pt solid #000;
+	padding:1em 2em;
+	position:absolute;
+	text-align:center;
+}
+
+#dialog h3 
+{ 
+	margin: 0.5em 0 0.5em 0; 
+	text-align:left; 
+}
+#dialog h3 img 
+{ 
+	float:left;
+	margin:0.25em 0.5em 0 0; 
+}
+#dialog h4 
+{ 
+	margin: 0.5em 0 0.5em 0; 
+	text-align:left; 
+}
+
+#dialog p, #dialog li
+{
+	clear:both;
+	line-height:1.3em;
+	text-align:left;
+	vertical-align:top;
+}
+
+#dialog ul, #dialog ol { margin: 0.25em 0 0.25em 3em; }
+#dialog ul li, #dialog ol li { margin: 0.5em 0; }
+#dialog li.noDot { list-style-type: none; }
+
+#dialog img 
+{ 
+	display:block;
+	margin: 0 auto 2em auto; 
+}
+#dialog img.icon
+{ 
+	float:left;
+	margin: 0 1em 0 0; 
+}
+
+#dialog p.iconNote
+{ 
+	float:left;
+	width:100%;
+}
+
+
+#dialog button 
+{ 
+	margin: 0 0.5em;
+	width:13em;	
+}
+
+#dialog #btnClose
+{
+	float:right;
+	width:4em;
+}
+
+#dialog p#deselectionNote
+{
+	font-weight:bold;
+	margin-top:0.5em;
+	text-align:center;
+}
+
+
+/* ------------------------------------------------------------ */
+/* ----- Supplementary Info ----------------------------------- */
+
+#supplementaryInfo
+{
+	padding: 2em;
+}
+#supplementaryInfo h2 { margin: 0 0 1em 0; }
+#supplementaryInfo ul { margin: 0 1em 0 2em; }

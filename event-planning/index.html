@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Event Planning Activity</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Krista Iverson">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+    <body>
+		<div id="activity">			
+			<div id="menuBar">
+				<button id="btnInstructions">Instructions</button>
+			</div>		
+			
+			<div id="progressBar">
+				<!--<table><td id="progressTableRow"></tr></table>-->
+				<div id="progressBarA"></div>
+				<div id="progressBarB"></div>
+			</div>
+			<div id="bottomSection" >
+				<h3>Plan An Event</h3>	
+				<div id="roomDiagram">
+					<p id="pRoomDiagramTxt1">Text here...</p>					
+					<div class="container"><canvas id="canvasBackground" width="600" height="575"></canvas></div>
+					<div class="container"><canvas id="canvasTables" width="600" height="575"></canvas></div>
+					<div class="container"><canvas id="canvasEquipment" width="600" height="575"></canvas></div>
+					<div id="canvasContainer" class="container"><canvas id="canvasForeground" width="600" height="575"></canvas></div>
+					<p id="pRoomDiagramTxt2">Text here...</p>
+				</div>		
+				<div id="stepDisplay"><!--Step information and selection options are added to this div.--></div>
+				<div id="navButtons">
+					<button type="button" id="btnBack">Back</button>
+					<button type="button" id="btnNext">Next</button>
+					<button type="button" id="btnRestart">Restart</button>
+					<p id="feedback"></p>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/utils/canvasManager.js"></script>
+		<script src="js/diagram/roomComponent.js"></script>
+		<script src="js/diagram/tablesGuests.js"></script>
+		<script src="js/diagram/tablesService.js"></script>
+		<script src="js/diagram/iconService.js"></script>
+		<script src="js/diagram/chairs.js"></script>
+		<script src="js/diagram/equipment.js"></script>
+		<script src="js/diagram/projectorAndScreen.js"></script>
+		<script src="js/diagram/pipeAndDrape.js"></script>
+		<script src="js/diagram/room.js"></script>
+		<script src="js/diagram/indicator.js"></script>
+		<script src="js/eventOptions.js"></script>
+		<script src="js/progressBar.js"></script>
+		<script src="js/stepDisplay.js"></script>
+		<script src="js/userSelections.js"></script>
+		<script src="js/main.js"></script>
+    </body>
+</html>

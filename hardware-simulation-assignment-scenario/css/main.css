@@ -1,0 +1,451 @@
+/* ------------------------------------------------------------ */
+/* ------ General Set-up -------------------------------------- */
+
+* { 
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-family: "Arial", sans-serif; 
+	font-size: 13px;
+	padding:0;
+	margin:0;
+}
+
+h1 { font-size: 23px; }
+h2 {font-size:16px; }
+h3 {font-size:14px; }
+h4 
+{
+	font-size:13px; 
+	margin:1.5em 0 0 0;
+}
+li { margin:0.5em 0; }
+button 
+{ 
+	background-color:#414042;
+	border: none;	
+	border-radius: 3px; 
+	color:#fff;
+	outline: none;	
+	padding:0.5em; 
+	width:9em;
+}
+button:hover { background-color:#231f20; }
+button:disabled, button:hover:disabled 
+{
+	background-color:#414042;
+	cursor:default;
+}
+button, input, select { cursor:pointer; }
+
+/* ------------------------------------------------------------ */
+/* ------ Activity -------------------------------------------- */
+
+#content, #activity
+{
+	margin:1em auto;
+	overflow:auto;
+	width:1150px;
+}
+
+h3 
+{
+	border-bottom:5pt solid #414042; 
+	padding-bottom:0.25em;
+}
+
+.box
+{
+	border:1pt solid black;
+	margin: 0.5em 0;
+}
+.pointer { cursor:pointer; }
+
+/* ------------------------------------------------------------ */
+/* ----- Leftside Content-------------------------------------- */
+
+#leftPanel
+{
+	display:block;
+	float:left;
+	width:625px;
+}
+
+/* ----- Component Assembly ------- */
+/* ----- Build Assembly ----------- */
+
+#buildAssemblyInfo
+{
+	background-color:#414042;
+	height:2.5em;
+	margin-top: 0.5em;
+	text-align:center;
+}
+#buildAssemblyInfo p 
+{ 
+	color:#fff;
+	display:inline-block; 
+	padding:0.75em;
+}
+#buildAssemblyInfo button 
+{
+	background: url("../img/general/plus_min.png") no-repeat right 10px center;
+	padding: 0.75em 0.5em 0.55em 0.75em;
+	text-align:left;
+}
+#buildAssemblyInfo button:hover { background:#231f20 url("../img/general/plus_min.png") no-repeat right 10px center; }
+#buildAssemblyInfo button:hover:disabled { background:#414042 url("../img/general/plus_min.png") no-repeat right 10px center; }
+#btnBuildScenario 
+{ 
+	float:left; 
+	width:9.75em;
+}
+#btnInstructions 
+{ 
+	float:right; 
+	width:8.25em;
+}
+#buildAssembly
+{
+	background-color:#d1d3d4;
+	clear:both;
+	overflow:auto;
+	height:auto;
+	margin-top:0;
+	width:auto;
+}
+
+.container 
+{
+	float: left;
+	left: 100%;
+    margin-left: -100%;
+    position: relative;
+}
+
+/* ----- Component List ----------- */
+
+#componentList 
+{ 
+	margin-top:0.75em;
+	min-height:162.5px;
+	overflow:auto;
+	padding:0.5em 1em; 
+}
+#componentList h4
+{
+	border-bottom:1pt solid #000;
+	padding:0 0.5em 0.25em 0.5em;
+	margin:0;
+}	
+	
+.column
+{
+	float:left;
+	margin-right:1em;
+	margin-right:0;
+	min-height:130px;
+	width:190px;
+}
+.column.last { margin-right:0; }
+
+div.buildComponent
+{	
+	float:left;
+	border-bottom:1pt solid #000;
+	padding:0.25em 0.5em; 
+	width:100%;
+}
+div.buildComponent p, div.buildComponent strong, div.buildComponent span { font-size:12px; }
+.buildComponent.connectable p { float:left; width:125px; }
+div.buildComponent strong { margin-right:0.5em; }
+.buildComponentConnections 
+{ 
+	float:right; 
+	width:50px;
+}
+/*.locked { color:#58595b; }
+div.buildComponent.doubleLine strong { display: block; width: 125px; }*/
+
+
+
+
+/* ----- Tooltip ------------------ */
+.tooltip 
+{
+	position: relative;
+	display: inline-block;
+	padding:0.25em 2.5px 0.25em 2.5px;
+	float:left;
+}
+
+.tooltipNum
+{
+	background-color:#319565;
+	border-radius: 20px;
+	color:#fff;
+	padding:0.2em 0.5em;
+}
+.tooltipNum:hover {background-color:#47ab7b; }
+
+.tooltip .tooltipText 
+{
+	background-color: #414042;
+	border-radius: 6px;
+	color: #fff;
+	left: 50%;
+	margin-left: -90px; 
+	padding: 0.5em;
+	position: absolute;
+	text-align: center;
+	visibility: hidden;
+	width: 180px;
+	z-index: 1;
+}
+.tooltip .tooltipText.top { bottom: 125%; }
+.tooltip .tooltipText.bottom { top: 125%; }
+
+.tooltip .tooltipText::after 
+{
+  content: " ";
+  position: absolute;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+}
+.tooltip .tooltipText.top::after 
+{ 
+	border-color: #414042 transparent transparent transparent; 
+	top: 100%; 
+}
+.tooltip .tooltiptext.bottom::after 
+{ 
+	border-color: transparent transparent #414042 transparent; 
+	bottom: 100%; 
+}
+
+.tooltip:hover .tooltipText { visibility: visible; }
+
+
+/* ------------------------------------------------------------ */
+/* ----- Rightside Content ------------------------------------ */
+
+#rightPanel
+{
+	float:right;
+	width:500px;
+}
+
+#componentShelf
+{
+	background-color:#939598;
+	height:675.5px;
+}
+
+/* ----- Component Sidebar -------- */
+
+#componentsShelfSidebar 
+{ 
+	float:left;
+	height:650px;
+	margin:10px 5px 10px 10px;
+	width:165px; 
+}
+
+#componentsShelfSidebar button
+{ 	
+	background: #414042 url("../img/general/plus.png") no-repeat right 10px center;
+	border-radius:0;
+	color:#fff;
+	font-weight:bold;
+	margin-bottom:6px;
+	padding:0.75em 2em 0.75em 1em;
+	text-align:left;
+	width: 100%;
+}
+#componentsShelfSidebar button.open { background-image: url("../img/general/minus.png"); }
+#componentsShelfSidebar button:hover { background-color: #343335  ; }
+#componentsShelfSidebar button:hover:disabled { background-color: #414042  ; }
+#componentsShelfSidebar button img
+{
+	float:right; 
+}
+
+.collapsibleOptions 
+{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.option
+{
+	background-color:#fff;
+	/*border-bottom:2pt solid rgba(255, 255, 255, 0);*/
+	cursor:pointer;
+	margin-bottom:6px;
+	overflow:auto;
+	padding:1em 0.5em 1em 1em;
+}
+.option p 
+{ 
+	float:left; 
+	width:125px;
+}
+.option input[type=checkbox] { float:right; }
+.option input[type=checkbox]:disabled
+{    
+    border-color: rgba(118, 118, 118, 1);
+	color: #fff;
+	opacity:1;
+}
+.option.disabled, .option.disabled:hover 
+{ 
+	background-color:#fff; 
+	cursor:default;
+}
+.option:hover, .option.active, .option.selected { background-color: #ddd; }
+.option.active { border-left:6pt solid #319565; }
+.option.selected { opacity:0.5; }
+
+
+/* ----- Component Highlight ------ */
+
+#dragInstructions { font-weight:bold; }
+
+#componentsShelfDisplay 
+{ 
+	background:#58595b url("../img/general/bg.png");
+	float:left;
+	height:650px;
+	margin:10px 10px 10px 5px;
+	padding:5px;
+	width:302px; 
+}
+
+#details
+{
+	background-color:#d1d3d4;
+	border-bottom:2pt solid #319565;
+	margin:0;
+	padding:10px;
+	position:absolute;
+	visibility: hidden;
+	width:288px;
+}
+#detailsInstructions { font-style:italic; }
+#interactableComponent 
+{ 
+	border: 2pt solid #d1d3d4;
+	margin:0.5em 0; 
+}
+#interactableComponent.selected { border: 2pt solid #319565; }
+#detailsImage 
+{ 
+	display: block;
+	margin: 0.5em auto; 
+}
+#detailsImageDrag { display:none; }
+#detailsName
+{
+	border-bottom:1pt solid #000000;
+	margin:0.5em 0;
+	text-align:right;
+}
+#detailsDesc p { margin:0.5em 0; }
+#detailsDesc ul { margin-left:1.5em;}
+
+/* ----- Bottom Buttons ----------- */
+
+#btnSubmit, #btnReset
+{ 
+	float:right; 
+	margin-left:0.5em; 
+}
+
+
+/* ------------------------------------------------------------ */
+/* ----- Text Dialogs ----------------------------------------- */
+
+#dialog, #dialogExample
+{ 
+	background-color:rgba(255, 255, 255, 1);
+	border: 10px solid #ccc;
+	outline:2px solid #000;
+	padding:1.5em;
+    position:absolute; 
+	text-align:center;
+	top:4.5em;
+}
+
+#dialog.feedback
+{
+	max-height:650px;
+	overflow-y:scroll;
+}
+
+#dialog h3, #dialog h4, #dialog p, #dialog ul { text-align:left; }
+
+#dialog h3 
+{ 
+	border-bottom:none;
+	margin-bottom: 1em; 
+	width: 500px;
+}
+#dialog h4 
+{ 
+	margin:2em 0 0.75em 0; 
+}
+#dialog p { margin:1em 0; }
+#dialog ul, ol { margin-left: 2em; }
+#dialog li { margin: 0.5em; text-align:left; }
+#dialog li p { margin: 0.5em 0 0 0; }
+#dialog img { margin: 0 0.75em 0 0; }
+
+#dialog div.box 
+{ 
+	padding:0.5em 0.75em;
+	margin:0;	
+}
+#dialog div.box + div.box { border-top:none; }
+
+#dialog button 
+{ 
+	display:inline-block;
+	margin: 0.75em 0.5em; 
+}
+#dialog #btnClose
+{ 
+	float:right;
+	margin:0 0 0.75em 0.5em;
+	width:4em;
+}
+
+#dialog div.exampleLink { float:right;  }
+#dialog div.exampleLink img 
+{ 
+	cursor:pointer;
+	margin:0 0 0 1em; 
+}
+
+#dialog.complete { top:20em; }
+
+
+/* ------------------------------------------------------------ */
+/* ----- Example Dialog --------------------------------------- */
+
+#dialogExample button 
+{  
+	float:right;
+	margin:0 0 0.75em 0.5em;
+	width:4em;
+}
+
+#dialogExample button:disabled, #dialogExample button:hover:disabled 
+{
+	background-color:#231f20;
+	opacity:0.5;
+	cursor:default;
+}
+
+#dialogExample video { margin:1.5em 0; }

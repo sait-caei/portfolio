@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Manual Lensometer Simulation</title>
+		<script src="Build/UnityLoader.js"></script>
+		<script>
+			//Show loader with progress bar that displays current loading progress.
+			function customProgress(unityInstance, progress) 
+			{
+				// Change fill of the progress bar
+				const fill = document.getElementById("progressBarFill");
+				fill.style.width = progress * 100 + "%";
+			
+				// If loaded, remove loader
+				const loader = document.getElementById("loader");
+				if (progress === 1) 
+				{
+					//Hide loader when build is loaded
+					loader.style.visibility = "hidden";
+				}
+				else
+				{
+					//Show loader at start
+					loader.style.visibility = "visible";
+				}
+			}
+			
+			//Instantiate Unity build
+			var unityInstance = UnityLoader.instantiate( "unity-container", "Build/Build.json", { onProgress: customProgress });
+		</script>
+		<link rel="stylesheet" href="css/main.css">
+   </head>
+   <body>
+		<div id="webgl-content">
+		   <div class="centered" style="width: 960px; height: 660px;">
+		   
+			  <div id="unity-container" style="width: 960px; height: 660px;"></div>
+			 
+			  <div id="loader">			  
+				<img src="IMG/saitLogo.jpg" id="logo" alt="SAIT logo" width="277px" height="394px" />
+				<h2>Manual Lensometer Simulation</h2>
+				<h3>Optician/Ophthalmic and Optometric Assisting Program</h3>				
+				<div id="progressbar">
+					<p>Loading...</p>
+					<div id="progressBarFill"></div>
+				</div>				
+				<p id="copyright">Copyright &copy; SAIT Southern Alberta Institute of Technology</p>
+			  </div>
+		   </div>
+		</div>
+   </body>
+</html>
