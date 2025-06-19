@@ -48,5 +48,10 @@
         "name": "Vision Care Slit Lamp Simulation",
         "description": "Interactive activity to prepare you for using slit lamps in the clinical lab.",
         "link": "vision-care-slit-lamp-simulation"
+    },
+    {
+        "name": "Phlebotomy Simulation",
+        "description": "Interactive activity to simulate the phlebotomy process journey",
+        "link": "nmed300-phleb"
     }
 ]
