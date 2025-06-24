@@ -39,12 +39,12 @@ class DragDropSlide extends Slide
 	{		
 		//Inactive image
 		this["imgDragger"+name+"Inactive"] = new Image();
-		this["imgDragger"+name+"Inactive"].src = "img/icons/draggers/dragger_"+name+"_inactive.png"; 
+		this["imgDragger"+name+"Inactive"].src = "img/icons/Draggers/dragger_"+name+"_inactive.png"; 
 		this["imgDragger"+name+"Inactive"].onload = () => { this.onImageLoaded(); }
 		
 		//Active image
 		this["imgDragger"+name+"Active"] = new Image();
-		this["imgDragger"+name+"Active"].src = "img/icons/draggers/dragger_"+name+"_active.png"; 
+		this["imgDragger"+name+"Active"].src = "img/icons/Draggers/dragger_"+name+"_active.png"; 
 		this["imgDragger"+name+"Active"].onload = () => { this.onImageLoaded(); }	
 	}		
 	

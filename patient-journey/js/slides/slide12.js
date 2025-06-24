@@ -150,7 +150,7 @@ class Slide12 extends QuestionSlide
 	loadIndicatorImage(id)
 	{
 		this["imgLine"+id] = new Image();
-		this["imgLine"+id].src = "img/icons/equipment/"+id+"_line.png"; 
+		this["imgLine"+id].src = "img/icons/Equipment/"+id+"_line.png"; 
 		this["imgLine"+id].onload = () => { this.onImageLoaded(); }
 	}
 	
