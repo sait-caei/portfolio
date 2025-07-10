@@ -53,5 +53,10 @@
         "name": "Phlebotomy Simulation",
         "description": "Interactive activity to simulate the phlebotomy process journey",
         "link": "nmed300-phleb"
+    },
+    {
+        "name": "Venipuncture Simulation",
+        "description": "Simulation of the patient journey through the venipuncture process",
+        "link": "nmed305-venipuncture"
     }
 ]
